@@ -3,8 +3,9 @@
 
 /**
  * binary_tree_node - Creates a binary tree node
- * parent - parent node
- * value - value of node
+ * @parent: parent node
+ * @value: value of node
+ * Return: Pointer to binary tree
  **/
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
@@ -19,5 +20,5 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	newnode->right = NULL;
 	newnode->parent = parent;
 
-	return newnode;
+	return (newnode);
 }
