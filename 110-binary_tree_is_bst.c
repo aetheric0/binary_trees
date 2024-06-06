@@ -8,6 +8,8 @@
 
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
+	if (tree == NULL)
+		return(0);
 	return (is_bst_util(tree, INT_MIN, INT_MAX));
 }
 
@@ -22,7 +24,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 int is_bst_util(const binary_tree_t *node, int min, int max)
 {
 	if (node == NULL)
-		return (0);
+		return (1);
 	if (node->n <= min || node->n >= max)
 		return (0);
 
