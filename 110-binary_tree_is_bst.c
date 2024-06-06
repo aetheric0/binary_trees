@@ -12,7 +12,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 }
 
 /**
- * is_bst util - Utility function to check if a binary tree is a valid BST.
+ * is_bst_util - Utility function to check if a binary tree is a valid BST.
  * @node: A pointer to the current node being checked
  * @min: The minimum allowed value for the current node.
  * @max: The maximum allowed value for the current node.
@@ -22,7 +22,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 int is_bst_util(const binary_tree_t *node, int min, int max)
 {
 	if (node == NULL)
-		return (1);
+		return (0);
 	if (node->n <= min || node->n >= max)
 		return (0);
 
